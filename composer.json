@@ -1,0 +1,7 @@
+{
+  "name": "spin2win/app",
+  "description": "Spin to Win PHP SPA",
+  "require": {
+    "phpmailer/phpmailer": "^6.9"
+  }
+}

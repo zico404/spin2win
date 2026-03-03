@@ -1,0 +1,37 @@
+:root {
+  --bg: #0f0f0f;
+  --panel: #171717;
+  --gold1: #d4af37;
+  --gold2: #ffd700;
+  --text: #f3f3f3;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  background: radial-gradient(circle at top, #181818, var(--bg));
+  color: var(--text);
+}
+.topbar { padding: 1rem 2rem; border-bottom: 1px solid #3b3117; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 42px; height: 42px; object-fit: contain; }
+main { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+.hero { text-align: center; position: relative; }
+#wheel { max-width: min(90vw, 500px); height: auto; border-radius: 50%; border: 6px solid var(--gold1); box-shadow: 0 0 25px rgba(212,175,55,.35); background: #111; }
+#spinBtn { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 0; border-radius: 999px; padding: 1rem 2rem; font-weight: 800; background: linear-gradient(45deg, var(--gold1), var(--gold2)); cursor: pointer; }
+#spinBtn:hover { box-shadow: 0 0 20px rgba(255,215,0,.5); }
+.card { margin-top: 2rem; background: var(--panel); border: 1px solid #5e4b1f; border-radius: 14px; padding: 1.2rem; }
+.marquee { overflow: hidden; }
+.marquee-track { display: flex; gap: 1.2rem; width: max-content; animation: slide 20s linear infinite; }
+.logo-item { width: 160px; height: 90px; display: flex; align-items: center; justify-content: center; border: 1px solid #3d3319; border-radius: 10px; background: #101010; }
+.logo-item img { max-width: 80%; max-height: 75%; filter: grayscale(.2); }
+.logo-item:hover { box-shadow: 0 0 16px rgba(212,175,55,.4); }
+@keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%);} }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.75); display: grid; place-items: center; }
+.hidden { display: none; }
+.modal-content { width: min(94vw, 430px); padding: 1.2rem; border-radius: 12px; background: #161616; border: 1px solid #8b6d1c; }
+.modal input, .modal button { width: 100%; margin-top: .7rem; padding: .8rem; border-radius: 8px; border: 1px solid #3d3d3d; background: #0f0f0f; color: #fff; }
+.modal button { border: 0; background: linear-gradient(45deg, var(--gold1), var(--gold2)); color: #111; font-weight: 700; }
+@media (max-width: 640px) {
+  #spinBtn { padding: .8rem 1.3rem; }
+}
